@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>GDExpress.Tools.Configuration.Extentions.StackOutputs</AssemblyName>
-    <RootNamespace>GDExpress.Tools.Configuration.Extentions.StackOutputs</RootNamespace>
+    <AssemblyName>PCM.Configuration.Extentions.StackOutputs</AssemblyName>
+    <RootNamespace>PCM.Configuration.Extentions.StackOutputs</RootNamespace>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Company>GDExpress</Company>
     <Authors>Pedro Carlos Martínez</Authors>

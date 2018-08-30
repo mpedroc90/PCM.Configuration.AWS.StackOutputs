@@ -5,29 +5,27 @@ using Amazon.CloudFormation;
 using Amazon.CloudFormation.Model;
 using Amazon.Runtime;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Primitives;
 
-namespace GDExpress.Tools.Configuration.Extentions.StackOutputs
+namespace PCM.Configuration.Extentions.StackOutputs
 {
     public class AwsStackConfigurationProvider : ConfigurationProvider
     {
         private List<Output> _outputs;
-
         private readonly string _stack;
-        private readonly string _accessKey;
-        private readonly string _secretKey;
-        private readonly string _region;
 
-        public AwsStackConfigurationProvider(string stack, string accessKey, string secretKey, string region)
+        private readonly AmazonCloudFormationClient _client;
+
+
+        public AwsStackConfigurationProvider(string stack, AWSCredentials credential, RegionEndpoint region = null)
         {
             _stack = stack;
-            _accessKey = accessKey;
-            _secretKey = secretKey;
-            _region = region;
+            _client = region == null ?
+            new AmazonCloudFormationClient(credential):
+            new AmazonCloudFormationClient(credential, region);
         }
 
 
-      
+        
         public override bool TryGet(string key, out string value)
         {
             var aux =_outputs.FirstOrDefault(t => t.ExportName == key);
@@ -43,14 +41,14 @@ namespace GDExpress.Tools.Configuration.Extentions.StackOutputs
 
         public override void Load()
         {
-            var client = new AmazonCloudFormationClient(new BasicAWSCredentials(_accessKey, _secretKey), RegionEndpoint.GetBySystemName(_region));
+          
 
             var request = new DescribeStacksRequest()
             {
                 StackName = _stack
             };
 
-            var response = client.DescribeStacksAsync(request).GetAwaiter().GetResult();
+            var response = _client.DescribeStacksAsync(request).GetAwaiter().GetResult();
             _outputs = response.Stacks.FirstOrDefault()?.Outputs.Where(t=> !string.IsNullOrEmpty(t.ExportName)).ToList();
 
         }

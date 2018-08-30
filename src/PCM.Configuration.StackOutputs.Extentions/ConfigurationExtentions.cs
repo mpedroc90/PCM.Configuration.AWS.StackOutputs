@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace GDExpress.Tools.Configuration.Extentions.StackOutputs
+namespace PCM.Configuration.Extentions.StackOutputs
 {
     public static class ConfigurationExtentions
 
@@ -16,16 +16,6 @@ namespace GDExpress.Tools.Configuration.Extentions.StackOutputs
         {
             builder.Add(new AwsStackConfigurationSource(stack));
             return builder;
-
         }
-
-
-        public static IConfigurationBuilder AddStackConfig(this IConfigurationBuilder builder, string stack, string profile)
-        {
-            builder.Add(new AwsStackConfigurationSource(stack));
-            return builder;
-
-        }
-
     }
 }

@@ -4,15 +4,16 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>PCM.Configuration.Extentions.StackOutputs</AssemblyName>
     <RootNamespace>PCM.Configuration.Extentions.StackOutputs</RootNamespace>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Company>GDExpress</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>PCM</Company>
     <Authors>Pedro Carlos Martínez</Authors>
     <Description>This library allow add to configuration the exports output in Aws Stack</Description>
     <NeutralLanguage />
     <PackageTags>Aws CloudFormation NetCore Configuration.Extentions Stacks OutPuts</PackageTags>
     <FileVersion>1.0.0.0</FileVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.1</Version>
+    <Version>1.0.0</Version>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>

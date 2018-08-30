@@ -18,12 +18,13 @@ namespace PCM.Configuration.Extentions.StackOutputs
             _regionEndpoint =  RegionEndpoint.GetBySystemName(region);
         }
 
-        public AwsStackConfigurationSource(string stack, RegionEndpoint region, AWSCredentials credentials)
+        public AwsStackConfigurationSource(string stack,  AWSCredentials credentials, RegionEndpoint region = null)
         {
             _regionEndpoint = region;
             _stack = stack;
             _credential = credentials;
         }
+
 
         public AwsStackConfigurationSource(string stack) : 
             this(stack, Environment.GetEnvironmentVariable("AWS_ACCESS_KEY"), Environment.GetEnvironmentVariable("AWS_SECRET_KEY"), Environment.GetEnvironmentVariable("AWS_REGION"))

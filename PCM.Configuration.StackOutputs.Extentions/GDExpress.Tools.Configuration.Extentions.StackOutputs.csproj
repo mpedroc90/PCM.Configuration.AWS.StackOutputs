@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>GDExpress.Tools.Configuration.Extentions.StackOutputs</AssemblyName>
+    <RootNamespace>GDExpress.Tools.Configuration.Extentions.StackOutputs</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Company>GDExpress</Company>
+    <Authors>Pedro Carlos Martínez</Authors>
+    <Description>This library allow add to configuration the exports output in Aws Stack</Description>
+    <NeutralLanguage />
+    <PackageTags>Aws CloudFormation NetCore Configuration.Extentions Stacks OutPuts</PackageTags>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.CloudFormation" Version="3.3.11.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>

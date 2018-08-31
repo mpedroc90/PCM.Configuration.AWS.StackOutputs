@@ -1,0 +1,32 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:51104/",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "AWS_REGION": "us-west-2",
+        "AWS_ACCESS_KEY": "my access key",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AWS_SECRET_KEY": "my secret key"
+      }
+    },
+    "PCM.Configuration.StackOutputs.Sample.NetCore": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:51105/"
+    }
+  }
+}

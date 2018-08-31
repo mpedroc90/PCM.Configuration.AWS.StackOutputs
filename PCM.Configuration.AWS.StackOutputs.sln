@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCM.Configuration.Extentions.StackOutputs", "src\PCM.Configuration.StackOutputs.Extentions\PCM.Configuration.Extentions.StackOutputs.csproj", "{E12D8819-350A-4AB8-8464-E28BF0255DEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCM.Configuration.StackOutputs.Sample.NetCore", "PCM.Configuration.StackOutputs.Sample.NetCore\PCM.Configuration.StackOutputs.Sample.NetCore.csproj", "{9078E413-876D-4AE9-BE45-39A87224624B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E12D8819-350A-4AB8-8464-E28BF0255DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E12D8819-350A-4AB8-8464-E28BF0255DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E12D8819-350A-4AB8-8464-E28BF0255DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9078E413-876D-4AE9-BE45-39A87224624B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9078E413-876D-4AE9-BE45-39A87224624B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9078E413-876D-4AE9-BE45-39A87224624B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9078E413-876D-4AE9-BE45-39A87224624B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
